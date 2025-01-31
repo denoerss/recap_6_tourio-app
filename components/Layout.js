@@ -4,11 +4,7 @@ import Head from "next/head";
 
 const Main = styled.main`
   display: grid;
-  gap: 0.5rem;
-  margin-top: 5rem;
-  padding: 0.5rem;
-  position: relative;
-  width: 100%;
+  padding-top: 6rem;
 `;
 
 export default function Layout({ children }) {
