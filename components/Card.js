@@ -3,14 +3,15 @@ import styled from "styled-components";
 import { StyledImage } from "./StyledImage";
 
 const Article = styled.article`
-  border: 1px solid black;
-  border-radius: 0.8rem;
-  padding: 0.5rem;
+  border-radius: 2.5rem;
+  padding: 1rem;
+  background-color: lightgrey;
+  border-bottom: 15px solid greenyellow;
 `;
 
 const ImageContainer = styled.div`
   position: relative;
-  height: 10rem;
+  height: 15rem;
   margin-bottom: 20px;
 `;
 
@@ -19,7 +20,18 @@ const Figure = styled.figure`
   position: relative;
   margin: 0;
   padding: 0;
-  line-height: 0.2rem;
+  line-height: 0.6rem;
+`;
+
+const PlaceName = styled.figcaption`
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-top: 15px;
+`;
+
+const PlaceCity = styled.p`
+  font-size: 0.95rem;
+  padding-top: 5px;
 `;
 
 export default function Card({ name, image, location, id }) {
@@ -37,10 +49,8 @@ export default function Card({ name, image, location, id }) {
               alt=""
             />
           </ImageContainer>
-          <figcaption>
-            <strong>{name}</strong>
-          </figcaption>
-          <p>{location}</p>
+          <PlaceName>{name}</PlaceName>
+          <PlaceCity>{location}</PlaceCity>
         </Figure>
       </Link>
     </Article>

@@ -7,13 +7,35 @@ const ListContainer = styled.ul`
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 15px;
   width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
 `;
 const FixedLink = styled(StyledLink)`
   position: fixed;
+  background-color: greenyellow;
+  color: #0d0f14;
   bottom: 50px;
   right: 50px;
+`;
+
+const Subhead = styled.h2`
+  font-size: 45px;
+  color: white;
+  line-height: 3.5rem;
+  padding-left: 20px;
+  padding-right: 20px;
+`;
+
+const EmColored = styled.em`
+  color: greenyellow;
+  font-style: normal;
+`;
+
+const EmUnderliend = styled.em`
+  text-decoration: underline;
+  font-style: normal;
 `;
 
 export default function Home() {
@@ -21,6 +43,10 @@ export default function Home() {
 
   return (
     <>
+      <Subhead>
+        Discover <EmColored>Hamburg</EmColored> <br />
+        and <EmUnderliend>other cities</EmUnderliend>.
+      </Subhead>
       <ListContainer>
         {data.map((place) => {
           return (
